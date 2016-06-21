@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "css": [ "vendor/jquery-ui-1.11.1.custom/jquery-ui.css", "mandrill-gmail-chrome-extension.css" ],
+      "js": [ "mandrill-gmail-chrome-extension.js", "jquery.highlight-4.closure.js", "vendor/jquery-ui-1.11.1.custom/jquery-ui.min.js", "vendor/addclear.js", "content.js" ],
+      "matches": [ "http://mail.google.com/*", "https://mail.google.com/*", "http://www.google.com/contacts/*", "https://www.google.com/contacts/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "oauth2/oauth2_inject.js" ],
+      "matches": [ "http://www.amazon.com/robots.txt*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "",
+   "externally_connectable": {
+      "matches": [ "*://mail.google.com/*" ]
+   },
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgbQYjKB+EI8mqdErllZ5g2Ln9D21iTNhpZgQq+qOgCl4o8XPkLJOMaxVrQ8EfZXI2wtzVTextLu/8M/Zrhk+KXwUMbwTLUOvepXn5K9DtCV/BtsLex4gWnbLCaCIZ/ACRAYn7N46tMV4Lhmbv6/emvV2s7KjEe15sRXxleUs9Idkjb/BjtQLTFXeTXJ4WNUHlNc1IpFCDcle1veVRvKcSfa+rormgYM4hHfYntM3ZUerATVw8dRaXvLqx91wsBQ7FA2/UeI20IZcGYJXLfSwQ2KIieYg+3n7ULAh0yFqvn2009dtVUMsoE+poW0chtAq6QUyxGLC6Bupd54GKL48PQIDAQAB",
+   "manifest_version": 2,
+   "name": "Introducr",
+   "permissions": [ "https://accounts.google.com/o/oauth2/token", "https://www.googleapis.com/", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0",
+   "web_accessible_resources": [ "frame.html", "frames.html", "mandrill-gmail-chrome-extension.css", "fonts/*", "images/*", "oauth2/oauth2.html", "doOAuth.js", "vendor/gmail.js", "vendor/jquery-2.1.4.min.js", "vendor/typeahead.js", "jquery.highlight-4.closure.js", "main.js" ]
+}

@@ -1,0 +1,9 @@
+    /* if( !$plugin.refreshOAuthRequestSent )
+                        {
+                            $plugin.refreshOAuthRequestSent = true;
+                            chrome.runtime.sendMessage({method: "refreshOAuth"}, function(responseRefresh) {
+                                $plugin.gmailOAuthData = JSON.parse(responseRefresh);
+                                localStorage.setItem(prefix + 'gmailAuthData', responseRefresh);
+                                $plugin.refreshOAuthRequestSent = false;
+                            });
+                        }*/
